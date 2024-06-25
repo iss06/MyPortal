@@ -9,7 +9,7 @@
 	<c:choose>
 		<c:when test="${not empty authUser }">
 			<ul>
-				<li><a href="<c:url value="/users?a=logout"/>">로그아웃</a></li>
+				<li><a href="<c:url value="/users/logout"/>">로그아웃</a></li>
 				<li>${sessionScope.authUser.name }님환영합니다.</li>
 				<!-- 로그인 한 사용자 -->
 				<!-- 웰컴 메시지, 로그아웃 링크 -->
@@ -20,8 +20,8 @@
 			<ul>
 				<!-- 로그인 안한 사용자 -->
 				<!-- 가입링크, 로그인 폼 링크 -->
-				<li><a href="<c:url value="/users?a=joinform" />">회원가입</a></li>
-				<li><a href="<c:url value="/users?a=loginform" />">로그인</a></li>
+				<li><a href="<c:url value="/users/login" />">로그인</a></li>
+				<li><a href="<c:url value="/users/join" />">회원가입</a></li>
 			</ul>
 		</c:otherwise>
 
