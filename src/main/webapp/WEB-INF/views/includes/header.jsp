@@ -3,6 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="true"%>
 <div id="header">
+	<c:if test="${not empty errorMsg }">
+		<h5>${errorMsg }</h5>
+	</c:if>
 	<h1>My Homepage</h1>
 	<p>authUser: ${authUser }</p>
 
@@ -10,7 +13,7 @@
 		<c:when test="${not empty authUser }">
 			<ul>
 				<li><a href="<c:url value="/users/logout"/>">로그아웃</a></li>
-				<li>${sessionScope.authUser.name }님환영합니다.</li>
+				<li>${authUser.name }님환영합니다.</li>
 				<!-- 로그인 한 사용자 -->
 				<!-- 웰컴 메시지, 로그아웃 링크 -->
 			</ul>
