@@ -30,7 +30,7 @@ public class BoardController {
 	public String list(Model model) {
 		List<BoardVo> list = boardService.getList();
 		model.addAttribute("list", list);
-		System.out.println(list);
+//		System.out.println(list);
 		return "board/list";
 	}
 
@@ -45,9 +45,9 @@ public class BoardController {
 			return "redirect:/";
 		}
 
-		System.out.println("no:" + no);
+//		System.out.println("no:" + no);
 		BoardVo boardVo = boardService.getContent(no);
-		System.out.println("vo:" + boardVo);
+//		System.out.println("vo:" + boardVo);
 		model.addAttribute("vo", boardVo);
 		return "board/view";
 	}
