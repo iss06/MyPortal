@@ -37,7 +37,8 @@ function checkEmail(event) {
 window.addEventListener("load", event => {
 	document.getElementById("check-email")
 		.addEventListener("click", checkEmail);
-
+	
+	/*
 	// 가입 폼 Validation
 	document.getElementById("join-form")
 		.addEventListener("submit", event => {
@@ -84,5 +85,5 @@ window.addEventListener("load", event => {
 		frm.submit();
 
 	});
-
+	*/
 });
